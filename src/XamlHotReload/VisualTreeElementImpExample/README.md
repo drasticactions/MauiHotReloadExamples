@@ -2,8 +2,6 @@
 
 The following example project shows you how to implement IVisualTreeElement to a custom VisualElement, allowing XAML Hot Reload to access and edit its data template.
 
----
-
 [Incremental XAML Hot Reload support for Xamarin Forms and MAUI](https://learn.microsoft.com/en-us/dotnet/maui/xaml/hot-reload?tabs=vswin) operates differently from other systems, including Full Page XAML Hot Reload. Most systems replace existing pages wholesale by replacing the existing page with a new construction based on the modified XAML. Incremental XAML Hot Reload attempts to alter the property value you changed and allow the underlying platform to apply the changes through the rest of the application.
 
 This approach has several benefits: Suppose you include UI logic in your page's constructor or OnPageAppearing. In that case, we will not invoke it, allowing you to reuse existing ViewModels and not worry about pulling down new data to see your changes. Likewise, you will stay in your place if you modify an ItemTemplate within a ListView or CollectionView. 
