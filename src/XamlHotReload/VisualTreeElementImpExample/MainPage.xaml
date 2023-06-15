@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VisualTreeElementImpExample;assembly=VisualTreeElementImpExample"
+             x:Class="VisualTreeElementImpExample.MainPage">
+
+    <Grid RowDefinitions="Auto, Auto">
+        <local:MyTemplatedControl x:Name="myTemplatedControl"
+                                  BackgroundColor="Beige"
+                                  Grid.Row="0"
+                                  HeightRequest="150"
+                                  WidthRequest="400">
+            <local:MyTemplatedControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid BackgroundColor="Yellow">
+                        <Label Text="MyTemplate"/>
+                    </Grid>
+                    <!--<Border BackgroundColor="Blue">
+                        <Label Text="SomethingElseWillFailWithHotReload"
+                               TextColor="Black"/>
+                    </Border>-->
+                </DataTemplate>
+            </local:MyTemplatedControl.ItemTemplate>
+        </local:MyTemplatedControl>
+    </Grid>
+
+</ContentPage>
